@@ -447,12 +447,7 @@
         <span class="code-lang">curl</span>
         <button class="copy-btn" id="copy-btn" onclick="copyCode()">copy</button>
       </div>
-      <code class="block" id="curl-code"><span class="hl-flag">curl</span> -X POST <span class="hl-url">{{ url('/api/notes') }}</span> \
-  <span class="hl-flag">-H</span> <span class="hl-val">"Content-Type: application/json"</span> \
-  <span class="hl-flag">-d</span> <span class="hl-val">'{</span>
-    <span class="hl-key">"title"</span>: <span class="hl-val">"My first note"</span>,
-    <span class="hl-key">"body"</span>:  <span class="hl-val">"Notes API is live on EC2."</span>
-  <span class="hl-val">}'</span></code>
+      <code class="block" id="curl-code"><span class="hl-flag">curl</span> -X POST <span class="hl-url">{{ url('/api/notes') }}</span> <span class="hl-flag">-H</span> <span class="hl-val">"Content-Type: application/json"</span> <span class="hl-flag">-d</span> <span class="hl-val">'{"title":"My first note","body":"Notes API is live on EC2."}'</span></code>
     </div>
     <p style="color:var(--text-2);font-size:0.875rem;margin-top:16px;">
       Full docs at <a href="/api-docs" style="color:var(--accent);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:0.82rem;">/api-docs</a> — includes Postman collection and OpenAPI spec.
