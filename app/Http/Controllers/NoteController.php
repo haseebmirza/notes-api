@@ -236,17 +236,14 @@ class NoteController extends Controller
             's3'
         );
 
-        return Storage::disk('s3')->url($path);
+        return $path;
     }
 
-    private function deleteS3File(?string $url): void
+    private function deleteS3File(?string $path): void
     {
-        if (!$url) {
+        if (!$path) {
             return;
         }
-
-        $parsed = parse_url($url);
-        $path   = ltrim($parsed['path'] ?? '', '/');
 
         Storage::disk('s3')->delete($path);
     }
