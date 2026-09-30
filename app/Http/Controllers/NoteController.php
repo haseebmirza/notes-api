@@ -54,15 +54,7 @@ class NoteController extends Controller
             ->paginate(15)
             ->withQueryString();
 
-        return NoteResource::collection($notes)
-            ->additional([
-                'meta' => [
-                    'total'        => $notes->total(),
-                    'per_page'     => $notes->perPage(),
-                    'current_page' => $notes->currentPage(),
-                    'last_page'    => $notes->lastPage(),
-                ],
-            ]);
+        return NoteResource::collection($notes);
     }
 
     /**
@@ -82,7 +74,7 @@ class NoteController extends Controller
      *   }
      * }
      */
-    public function store(StoreNoteRequest $request): NoteResource
+    public function store(StoreNoteRequest $request): \Illuminate\Http\JsonResponse
     {
         $note = Note::create($request->only('title', 'body'));
 
