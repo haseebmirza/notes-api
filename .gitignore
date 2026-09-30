@@ -1,0 +1,52 @@
+# Laravel
+*.log
+.env
+.env.backup
+.env.production
+.env.*.local
+/vendor
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/public/fonts-manifest.dev.json
+/storage/*.key
+/storage/pail
+/bootstrap/cache/*.php
+
+# Testing
+.phpunit.result.cache
+/.phpunit.cache
+
+# IDE & editors
+.DS_Store
+Thumbs.db
+.phpactor.json
+/.idea
+/.vscode
+/.cursor/
+/.nova
+/.zed
+_ide_helper.php
+_ide_helper_models.php
+
+# AI agent directories
+/.claude
+/.codex
+/.aider*
+/.continue
+
+# Credentials & secrets
+/auth.json
+*.pem
+*.key
+*.p12
+*.pfx
+Homestead.json
+Homestead.yaml
+
+# Scribe generated output (regenerate with php artisan scribe:generate)
+/storage/app/private/scribe/
+/resources/views/scribe/
+/public/vendor/scribe/
+/.scribe/
