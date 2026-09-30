@@ -236,7 +236,7 @@ class NoteController extends Controller
             's3'
         );
 
-        return $path;
+        return ltrim($path, '/');
     }
 
     private function deleteS3File(?string $path): void
